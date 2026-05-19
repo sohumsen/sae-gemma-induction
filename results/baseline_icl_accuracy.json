@@ -1,0 +1,8 @@
+{
+  "top1_accuracy": 0.576,
+  "top5_accuracy": 0.787,
+  "n_probes": 2000,
+  "n_correct_top1": 1152,
+  "n_correct_top5": 1574,
+  "gate_passed": true
+}

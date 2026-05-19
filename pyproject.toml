@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sae-gemma-induction"
+version = "0.1.0"
+description = "Sparse autoencoder analysis of induction features in Gemma-2-2B"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = { text = "MIT" }
+authors = [{ name = "Sohum" }]
+
+dependencies = [
+    # torch is installed from the cu128 wheel index — see README. Listed for reference only.
+    "torch>=2.11",
+    "sae-lens>=6.0,<7.0",
+    "transformer-lens>=3.0,<4.0",
+    "transformers>=4.44,<6.0",
+    "datasets>=2.20,<5.0",
+    "accelerate>=0.33,<2.0",
+    "wandb>=0.17,<1.0",
+    "numpy>=1.26,<3.0",
+    # pandas 3.0 cp313 wheels triggered Windows Application Control blocks on dev box — pin to 2.x.
+    "pandas>=2.2,<3.0",
+    "pyarrow>=16",
+    "matplotlib>=3.9",
+    "tqdm>=4.66",
+    "rich>=13.7",
+    "scipy>=1.13",
+    "psutil>=5.9",
+    "python-dotenv>=1.0",
+    "zstandard>=0.22",
+]
+
+[project.optional-dependencies]
+dashboard = [
+    "streamlit>=1.36",
+    "altair>=5",
+]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "UP"]

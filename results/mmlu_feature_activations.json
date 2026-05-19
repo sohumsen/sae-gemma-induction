@@ -1,0 +1,32 @@
+{
+  "n_questions": 200,
+  "n_shots": 4,
+  "seed": 20260518,
+  "hook": "blocks.12.hook_resid_post",
+  "sae_path": "C:\\Users\\sohum\\CodeHome\\sae-gemma-induction\\models\\sae_main",
+  "target_features": [
+    15289,
+    11606,
+    14740,
+    7467
+  ],
+  "few_shot_mean": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "shuffled_mean": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "ratio": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "n_truncated": 25
+}

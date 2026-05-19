@@ -1,0 +1,12 @@
+# Requirements for Streamlit Community Cloud deployment.
+# The dashboard loads pre-computed parquet/json files only — no model
+# inference, no torch, no transformers, no SAELens. The full project's
+# dev install is via `pip install -e ".[dashboard,dev]"` against
+# pyproject.toml (which has the heavier ML stack); Streamlit Cloud uses
+# this file instead.
+
+streamlit>=1.36
+pandas>=2.2,<3.0
+pyarrow>=16
+matplotlib>=3.9
+numpy>=1.26,<3.0

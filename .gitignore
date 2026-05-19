@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+.installed.cfg
+
+# venv
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# ML artefacts — large; never commit
+models/
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.bin
+
+# W&B
+wandb/
+
+# HF cache (in case anyone sets HF_HOME inside the repo)
+.cache/
+hf_cache/
+
+# Local pile cache (large; pre-downloaded for robust SAE training)
+data/
+
+# Results — keep small intermediates for reproducibility, exclude large dumps
+results/cache/
+results/activations/
+results/figures/*.svg
+!results/figures/.gitkeep
+*.parquet
+!results/top_snippets.parquet
+!results/induction_feature_scores.parquet
+!results/head_correspondence.parquet
+
+# Logs
+logs/
+*.log
+log.txt
+err.txt
+
+# Secrets
+.env
+.env.*
+!.env.example
