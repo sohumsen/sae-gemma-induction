@@ -2,6 +2,9 @@
 
 Sparse autoencoder analysis of induction features in Gemma-2-2B — an extension of Olsson et al. (2022) ["In-context Learning and Induction Heads"](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html) from the attention-head level to the SAE feature level.
 
+<img width="1910" height="870" alt="image" src="https://github.com/user-attachments/assets/2f2dcf90-a7de-4130-8a19-e7739369611f" />
+
+
 ## TL;DR
 
 Trained a TopK SAE (width 16,384, k=80) on `blocks.12.hook_resid_post` of Gemma-2-2B. Identified **420 induction-feature candidates** out of the SAE's 16k features. **Ablating the top-5 dropped ICL top-1 accuracy from 42% → 26% — a 16pp reduction using 0.03% of features.** The most strongly-induction feature correlates with attention head 6 at layer 12 (Pearson r = 0.190), which head-level ablation also identifies as the dominant induction head.
